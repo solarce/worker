@@ -45,6 +45,7 @@ script:
 - make crossbuild
 - make smoke
 - if [[ $PACKAGECLOUD_TOKEN ]]; then make package && make smoke-package; fi
+- true
 
 after_success:
 - utils/atlas-push
